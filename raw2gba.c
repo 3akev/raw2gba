@@ -57,7 +57,7 @@ int main(int argc, char** argv) {
 
     /* print the first byte */
     int line_counter = 1;
-    fprintf(output, "0x%02X", bytes[0] & 0xff);
+    fprintf(output, "(signed char) 0x%02X", bytes[0] & 0xff);
 
     for (i = 1; i < length; i++) {
         /* print a comma after the last byte */
@@ -71,7 +71,7 @@ int main(int argc, char** argv) {
 
         /* print the next bytw */
         line_counter++;
-        fprintf(output, "0x%02X", bytes[i] & 0xff);
+        fprintf(output, "(signed char) 0x%02X", bytes[i] & 0xff);
     }
     fprintf(output, "\n};\n\n"); 
 
